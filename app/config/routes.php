@@ -23,6 +23,7 @@
 
 use Cake\Routing\Route\DashedRoute;
 use Cake\Routing\RouteBuilder;
+use Cake\Routing\Router;
 
 /*
  * This file is loaded in the context of the `Application` class.
@@ -93,4 +94,9 @@ return function (RouteBuilder $routes): void {
      * });
      * ```
      */
+
+    Router::scope('/api', function (RouteBuilder $routes) {
+        $routes->setExtensions(['json']);
+        $routes->connect('/posts', ['controller' => 'Posts', 'action' => 'index']);
+    });
 };
