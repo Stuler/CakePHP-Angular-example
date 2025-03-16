@@ -95,8 +95,9 @@ return function (RouteBuilder $routes): void {
      * ```
      */
 
-    Router::scope('/api', function (RouteBuilder $routes) {
+    $routes->scope('/api', function (RouteBuilder $routes) {
         $routes->setExtensions(['json']);
-        $routes->connect('/posts', ['controller' => 'Posts', 'action' => 'index']);
+//        $routes->connect('/api', ['controller' => 'Api', 'action' => 'index']);
+        $routes->resources('Users');
     });
 };

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "a070f9fb8758c54ded06acaf351224f6",
+    "content-hash": "80eac93971b7ccd00c61c61158b76fb1",
     "packages": [
         {
             "name": "cakephp/cakephp",
@@ -368,6 +368,44 @@
                 }
             ],
             "time": "2025-03-06T14:30:56+00:00"
+        },
+        {
+            "name": "kaz29/cakephp-cors-middleware-plugin",
+            "version": "1.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/kaz29/cakephp-cors-middleware-plugin.git",
+                "reference": "f7ca4be6336c5708d7a92c12c7e274f5b79b13f7"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/kaz29/cakephp-cors-middleware-plugin/zipball/f7ca4be6336c5708d7a92c12c7e274f5b79b13f7",
+                "reference": "f7ca4be6336c5708d7a92c12c7e274f5b79b13f7",
+                "shasum": ""
+            },
+            "require": {
+                "cakephp/cakephp": "^5.0.0",
+                "php": ">=8.1"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^10.1.0"
+            },
+            "type": "cakephp-plugin",
+            "autoload": {
+                "psr-4": {
+                    "CorsMiddleware\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "CorsMiddleware plugin for CakePHP",
+            "support": {
+                "issues": "https://github.com/kaz29/cakephp-cors-middleware-plugin/issues",
+                "source": "https://github.com/kaz29/cakephp-cors-middleware-plugin/tree/1.1.0"
+            },
+            "time": "2024-01-07T05:41:01+00:00"
         },
         {
             "name": "laminas/laminas-diactoros",

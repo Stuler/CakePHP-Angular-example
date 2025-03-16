@@ -8,8 +8,11 @@ class UsersController extends AppController
 {
     public function index(): void
     {
-        $users = $this->paginate($this->Users);
-        $this->set(compact('users'));
+        $users = $this->Users->find('all');
+        $this->set([
+            'users' => $users,
+            '_serialize' => ['users']
+        ]);
     }
 
     public function signUp()
@@ -24,6 +27,18 @@ class UsersController extends AppController
             $this->Flash->error(__('The user could not be saved. Please, try again.'));
         }
         $this->set(compact('user'));
+    }
+
+    public function signIn()
+    {
+        if ($this->request->is('post')) {
+            $user = $this->Auth->identify();
+            if ($user) {
+                $this->Auth->setUser($user);
+                return $this->redirect($this->Auth->redirectUrl());
+            }
+            $this->Flash->error(__('Invalid username or password, try again'));
+        }
     }
 
 }
