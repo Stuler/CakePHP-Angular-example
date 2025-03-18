@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "80eac93971b7ccd00c61c61158b76fb1",
+    "content-hash": "d8704acb9a6364003956db43ee97641d",
     "packages": [
         {
             "name": "cakephp/cakephp",
@@ -1319,6 +1319,46 @@
                 "source": "https://github.com/cakephp/phinx/tree/0.16.6"
             },
             "time": "2024-12-20T23:02:54+00:00"
+        },
+        {
+            "name": "rrd108/cakephp-cors",
+            "version": "0.1.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/rrd108/cakephp-cors.git",
+                "reference": "84aab91f8576e7e11b2d5e61382159f75173f0f8"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/rrd108/cakephp-cors/zipball/84aab91f8576e7e11b2d5e61382159f75173f0f8",
+                "reference": "84aab91f8576e7e11b2d5e61382159f75173f0f8",
+                "shasum": ""
+            },
+            "require": {
+                "cakephp/cakephp": "^5.0",
+                "psr/http-server-handler": "^1.0",
+                "psr/http-server-middleware": "^1.0"
+            },
+            "require-dev": {
+                "cakephp/cakephp-codesniffer": "@stable",
+                "phpunit/phpunit": "^10.1"
+            },
+            "type": "cakephp-plugin",
+            "autoload": {
+                "psr-4": {
+                    "Rrd108\\Cors\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "A CakePHP plugin for activate cors domain in your application",
+            "support": {
+                "issues": "https://github.com/rrd108/cakephp-cors/issues",
+                "source": "https://github.com/rrd108/cakephp-cors/tree/0.1.1"
+            },
+            "time": "2024-02-03T17:29:38+00:00"
         },
         {
             "name": "symfony/config",

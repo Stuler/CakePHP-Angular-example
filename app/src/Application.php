@@ -66,7 +66,6 @@ class Application extends BaseApplication
     public function middleware(MiddlewareQueue $middlewareQueue): MiddlewareQueue
     {
         $middlewareQueue
-            ->add(new CorsMiddleware(Configure::read('App.cors')))
             // Catch any exceptions in the lower layers,
             // and make an error page/response
             ->add(new ErrorHandlerMiddleware(Configure::read('Error'), $this))
@@ -92,6 +91,12 @@ class Application extends BaseApplication
             ->add(new CsrfProtectionMiddleware([
                 'httponly' => true,
             ]));
+
+        $middlewareQueue->add(new CorsMiddleware([
+            'Access-Control-Allow-Origin' => '*',
+            'Access-Control-Allow-Methods' => ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+            'Access-Control-Allow-Headers' => ['Content-Type', 'Authorization'],
+        ]));
 
         return $middlewareQueue;
     }

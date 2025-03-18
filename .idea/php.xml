@@ -94,6 +94,8 @@
       <path value="$PROJECT_DIR$/app/vendor/psr/http-client" />
       <path value="$PROJECT_DIR$/app/vendor/psr/cache" />
       <path value="$PROJECT_DIR$/app/vendor/psr/clock" />
+      <path value="$PROJECT_DIR$/app/vendor/rrd108/cakephp-cors" />
+      <path value="$PROJECT_DIR$/app/vendor/kaz29/cakephp-cors-middleware-plugin" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="8.1" />
